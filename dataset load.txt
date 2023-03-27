@@ -1,0 +1,22 @@
+#For listing the images in the folder and sorting them 
+image_name = glob.glob('/content/drive/MyDrive/patchimg (1)/*.png')
+#print(image_name)
+image_name.sort()#for sorting according to name
+print(image_name)
+
+#to convert list in to array and change dimention to 4
+image =[cv2.imread(img,0) for img in image_name]
+image_dataset = np.array(image)
+image_dataset = np.expand_dims(image_dataset,axis = 3)#to expand the array
+#print(image_dataset)
+#For listing the images in the folder and sorting them 
+image_name = glob.glob('/content/drive/MyDrive/nucleiimg/*.png')
+#print(image_name)
+image_name.sort()#for sorting according to name
+print(image_name)
+image_names_subset = image_name[0:2000]
+#to convert list in to array and change dimention to 4
+image =[cv2.imread(img,0) for img in image_names_subset]
+image_dataset = np.array(image)
+image_dataset = np.expand_dims(image_dataset,axis = 3)#to expand the array
+#print(image_dataset)

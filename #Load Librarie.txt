@@ -1,0 +1,24 @@
+#Load Librarie
+
+import glob # for access a file
+import cv2 #for imread,imwrite
+import numpy as np #for array functions
+from google.colab.patches import cv2_imshow #for imshow
+import random 
+import matplotlib.pyplot as plt#for plot
+from PIL import Image #python imaging library
+import os #to get read, write on a file
+import seaborn as sns 
+
+from tensorflow.keras.metrics import MeanIoU# to get intersection over unio
+import tensorflow as tf# main library
+from tensorflow.keras import models, layers, regularizers
+from tensorflow.keras import backend as K
+from tensorflow.keras.optimizers import Adam
+import tensorflow as tf
+from datetime import datetime 
+from keras import backend, optimizers
+import focal_loss
+#FOCAL LOSS AND DICE METRIC
+#Focal loss helps focus more on tough to segment classes.
+from focal_loss import BinaryFocalLoss

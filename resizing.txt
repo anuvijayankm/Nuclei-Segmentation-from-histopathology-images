@@ -1,0 +1,15 @@
+# to resize image and  mask 
+f = r'/content/drive/MyDrive/patchimg/'
+for file in os.listdir(f):
+    f_img = f+"/"+file
+    img = Image.open(f_img)
+    img = img.resize((256,256))
+    img.save(f_img)
+
+#resize original images
+f = r'/content/drive/MyDrive/patchmask/'
+for file in os.listdir(f):
+    f_img = f+"/"+file
+    img = Image.open(f_img)
+    img = img.resize((256,256))
+    img.save(f_img)
